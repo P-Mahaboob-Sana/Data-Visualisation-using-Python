@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+    <title>AI powered Quiz App</title>
+</head>
+<body>
+    <div class="main">
+        <form action="http://localhost:5000/quiz" method="POST">
+            <h1>Let's play a QUIZ</h1>
+            <div class="topic">
+                <label for="topic">What's the topic</label>
+                <input type="text" name="topic" value="">
+            </div>
+            <div class="ques">
+                <label for="ques">How many questions?</label>
+                <input type="number" name="ques" value="">
+            </div>
+            <div class="choices">
+                <label for="choices">No. of choices</label>
+                <select name="choices" id="choices">
+                    <option value="two">Two</option>
+                    <option value="three">Three</option>
+                    <option value="four">Four</option>
+                    <option value="true/false">True/False</option>
+                </select>
+            </div>
+            <div class="diff">
+                <label for="diff">Difficulty?</label>
+                <select name="diff" id="diff">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
